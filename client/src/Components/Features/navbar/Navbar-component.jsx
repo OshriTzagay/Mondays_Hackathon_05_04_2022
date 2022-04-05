@@ -28,17 +28,13 @@ const LogOut = ()=>{
       <Link className="nav-links" to="home">HOME</Link>
       {/* <Link className="nav-links" to="/">LOGIN</Link> */}
       <Link className="nav-links" to="ideas">POSTS</Link>
-
       </div>
-
       <div className="right-nav">
 
       <Link className="nav-links" to={`profile/${user._id}`}><CgProfile/></Link>
       <Link className="nav-links" to="/" onClick={LogOut}><MdLogout/></Link>
 
       </div>
-
-      
 
     </div>
 
