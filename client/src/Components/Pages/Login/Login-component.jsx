@@ -42,7 +42,11 @@ export default function Login() {
       <label htmlFor="password">Password:</label>
       <br />
       <input type="password" name="Password" onChange={changingTheValue} />
+      <br />
       <button onClick={SendTheLoginUser}>SEND!</button>
+
     </div>
   );
 }
+
+

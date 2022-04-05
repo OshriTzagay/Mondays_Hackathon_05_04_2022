@@ -8,6 +8,12 @@ const GetAllIdeas = async (req, res) => {
     .then((result) => res.status(200).json(result))
     .catch((err) => res.status(404).json({ massage: err }));
 };
+const GetIdeasByType = async (req, res) => {
+  await Ideas.find({Category:req.params.type})
+    .populate("UserId")
+    .then((result) => res.status(200).json(result))
+    .catch((err) => res.status(404).json({ massage: err }));
+};
 
 const GetIdeaById = async (req, res) => {
   await Ideas.findById(req.params.id)
@@ -54,4 +60,5 @@ module.exports = {
   AddIdea,
   UpdateIdea,
   DeleteIdea,
+  GetIdeasByType
 };

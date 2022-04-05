@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Components/Pages/Home/Home-component";
 import Login from "./Components/Pages/Login/Login-component";
 import Profile from "./Components/Pages/Profile/Profile-component";
-import Post from "./Components/Pages/Post/Post-component";
+import Ideas from "./Components/Pages/Ideas/Ideas-component";
 import NavBar from "./Components/Features/NavBar/Navbar-component";
 import Footer from "./Components/Features/Footer/Footer-component";
 
@@ -15,14 +15,18 @@ export const AppRouter = () => {
           <Routes>
             <Route exact path="/" element={<Login />}></Route>
             <Route exact path="/home" element={<Home />}></Route>
-            <Route exact path="/posts" element={<Post />}></Route>
+            <Route exact path="/ideas" element={<Ideas />}></Route>
             <Route exact path="/profile" element={<Profile />}></Route>
           </Routes>
         </div>
 
 
-      </BrowserRouter>
       <Footer />
+      </BrowserRouter>
+<<<<<<< HEAD
+      <Footer />
+=======
+>>>>>>> 2fc32e1a061c3905b18b226d2fa1a9740bb9e777
 
     </div>
   );
