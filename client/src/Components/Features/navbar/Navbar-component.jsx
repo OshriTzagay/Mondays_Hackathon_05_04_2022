@@ -15,6 +15,7 @@ export default function Navbar() {
   const { user, setUser } = useContext(UsersContext);
   return (
     <div className="the-navbar">
+
       <div className="left-nav">
       <Link className="nav-links" to="home">ICON</Link>
       <Link className="nav-links" to="home">HOME</Link>
@@ -31,6 +32,7 @@ export default function Navbar() {
       </div>
 
       
+
 
     </div>
 
