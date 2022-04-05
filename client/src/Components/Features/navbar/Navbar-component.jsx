@@ -30,7 +30,7 @@ export default function Navbar() {
           <Link className="nav-links" to="admin">Admin||</Link>
           : ''}
         {/* <Link className="nav-links" to="/">LOGIN</Link> */}
-        <Link className="nav-links" to="ideas">POSTS</Link>
+        <Link className="nav-links" to="ideas">Ideas</Link>
       </div>
       <div className="right-nav">
 
