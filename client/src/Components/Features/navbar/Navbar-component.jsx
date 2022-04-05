@@ -7,10 +7,10 @@ export default function Navbar() {
   const { user, setUser } = useContext(UsersContext);
   return (
     <div>
-      <Link className="nav-links to="/">LOGIN||</Link>
-      <Link className="nav-links to="home">HOME||</Link>
-      <Link className="nav-links to="ideas">POSTS||</Link>
-      <Link className="nav-links to={`profile/${user._id}`}>PROFILE||</Link>
+      <Link  to="/" className="nav-links">LOGIN||</Link>
+      <Link  to="home" className="nav-links">HOME||</Link>
+      <Link  to="ideas"className="nav-links">POSTS||</Link>
+      <Link  to={`profile/${user._id}`}className="nav-links">PROFILE||</Link>
     </div>
     
   );
