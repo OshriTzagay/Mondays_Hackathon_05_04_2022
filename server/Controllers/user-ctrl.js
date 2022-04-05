@@ -22,7 +22,7 @@ module.exports = {
     if (Users.exists(req.body.Email) == false)
       return res.status(400).json({ message: "Email not found" });
     try {
-      const user = await Users.findOne({ Email: req.body.Email }).populate('Company');
+      const user = await Users.findOne({ Email: req.body.Email }).populate('Company Ideas');
       bcrypt.compare(req.body.Password, user.Password, (err, isMatch) => {
         if (err) return res.status(500).json({ message: "Error" });
         if (!isMatch)
@@ -49,8 +49,8 @@ module.exports = {
       .catch((err) => res.send({ ERROR: err }));
   },
 
-  DeleteUserByName: async (req, res) => {
-    await Users.findOneAndRemove({ firstName: req.params.name })
+  DeleteUserById: async (req, res) => {
+    await Users.findByIdAndRemove({ _id: req.params.id })
       .then((deletedUser) =>
         res.status(200).send({ DELETED_USER: deletedUser })
       )
