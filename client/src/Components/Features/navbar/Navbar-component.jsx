@@ -25,9 +25,9 @@ const LogOut = ()=>{
     <div className="the-navbar">
       <div className="left-nav">
       <Link className="nav-links" to="home">ICON</Link>
-      <Link className="nav-links" to="home">HOME</Link>
+      <Link className="nav-links" to="/home">Home</Link>
       {/* <Link className="nav-links" to="/">LOGIN</Link> */}
-      <Link className="nav-links" to="ideas">POSTS</Link>
+      <Link className="nav-links" to="/ideas">Ideas</Link>
       </div>
       <div className="right-nav">
 
