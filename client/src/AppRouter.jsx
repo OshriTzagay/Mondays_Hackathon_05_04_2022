@@ -5,25 +5,30 @@ import Profile from "./Components/Pages/Profile/Profile-component";
 import Ideas from "./Components/Pages/Ideas/Ideas-component";
 import NavBar from "./Components/Features/NavBar/Navbar-component";
 import Footer from "./Components/Features/Footer/Footer-component";
+import NotFound from "./Components/Pages/NotFound/NotFound-component";
+import { UsersContext } from "./Context/User/User-context";
+import { useContext } from "react";
 
 export const AppRouter = () => {
+  const { isLoggedIn, setIsLoggedIn } = useContext(UsersContext);
+    setIsLoggedIn(false);
   return (
     <div className="App">
       <BrowserRouter>
-      <NavBar />
+    
+        <NavBar />
         <div className="main-content">
           <Routes>
             <Route exact path="/" element={<Login />}></Route>
             <Route exact path="/home" element={<Home />}></Route>
             <Route exact path="/ideas" element={<Ideas />}></Route>
             <Route exact path="/profile" element={<Profile />}></Route>
+            <Route exact path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
 
-
-      <Footer />
+        <Footer />
       </BrowserRouter>
-
     </div>
   );
 };
