@@ -35,7 +35,7 @@ export const AppRouter = () => {
           </Routes>
         </div>
       {/* {isLoggedIn?<Footer />: null} */}
-    
+    <Footer/>
       </BrowserRouter>
   
 
