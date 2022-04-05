@@ -13,17 +13,14 @@ import Admin from "./Components/Pages/Admin/Admin-component";
 
 export const AppRouter = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(UsersContext);
-    setIsLoggedIn(false);
   return (
     <div className="App">
       <BrowserRouter>
     
-        <NavBar />
+      {isLoggedIn &&  <NavBar />}
         <div className="main-content">
           <Routes>
-
             <Route exact path="/" element={isLoggedIn?<Home />:<Login/>}></Route>
-
             <Route exact path="/home" element={<Home />}> </Route>
             <Route exact path="/ideas" element={<Ideas />}>
             <Route exact path=":prodact" element={<IdeasByCategory />}></Route>
