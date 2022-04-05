@@ -3,6 +3,7 @@ import { loginUser } from "../../../Services/User-Service";
 import { UsersContext } from "../../../Context/User/User-context";
 import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 export default function Login() {
   const { user, setUser ,setIsLoggedIn} = useContext(UsersContext);
@@ -32,20 +33,27 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <label htmlFor="Email">Email:</label>
-      <br />
-      <input type="text" name="Email" onChange={changingTheValue} />
-      <br />
+    <div className="login-container">
 
-      <label htmlFor="password">Password:</label>
-      <br />
-      <input type="password" name="Password" onChange={changingTheValue} />
-      <br />
-      <button onClick={SendTheLoginUser}>SEND!</button>
 
+      <div className="login-form">
+
+        <label htmlFor="Email">Email:</label>
+        <br />
+        <input type="text" name="Email" onChange={changingTheValue} className="login-inputs" />
+        <br />
+
+        <label htmlFor="password">Password:</label>
+        <br />
+        <input type="password" name="Password" onChange={changingTheValue} className="login-inputs" />
+        <br />
+        <button onClick={SendTheLoginUser}>SEND!</button>
+      </div>
+
+
+      <div className="login-img">
+        {/* <img src="https://media.istockphoto.com/vectors/simple-black-childish-hand-drawing-lines-lightbulbs-on-yellow-for-vector-id1218939164?k=20&m=1218939164&s=612x612&w=0&h=l-zFfwmLLP6IxuRam1tRv_s7txDPzTIqML__1qmTG5s=" alt="" /> */}
+      </div>
     </div>
   );
 }
-
-

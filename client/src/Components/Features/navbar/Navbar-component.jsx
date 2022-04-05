@@ -1,12 +1,17 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
+
+import React, { useContext, useEffect, useState } from "react";
+import { UsersContext } from "../../../Context/User/User-context";
 export default function Navbar() {
+  const { user, setUser } = useContext(UsersContext);
   return (
     <div>
-      <Link to="/">LOGIN||</Link>
-      <Link to="home">HOME||</Link>
-      <Link to="ideas">POSTS||</Link>
-      <Link to="profile">PROFILE||</Link>
+      <Link className="nav-links to="/">LOGIN||</Link>
+      <Link className="nav-links to="home">HOME||</Link>
+      <Link className="nav-links to="ideas">POSTS||</Link>
+      <Link className="nav-links to={`profile/${user._id}`}>PROFILE||</Link>
     </div>
+    
   );
 }
