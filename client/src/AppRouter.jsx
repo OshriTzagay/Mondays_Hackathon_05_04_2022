@@ -21,9 +21,9 @@ export const AppRouter = () => {
         </div>
 
 
+      <Footer />
       </BrowserRouter>
 
-      <Footer />
     </div>
   );
 };
