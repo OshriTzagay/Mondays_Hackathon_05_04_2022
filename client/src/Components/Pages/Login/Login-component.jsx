@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 export default function Login() {
-  const { user, setUser } = useContext(UsersContext);
+  const { user, setUser ,setIsLoggedIn} = useContext(UsersContext);
   const Navigate = useNavigate();
 
   const changingTheValue = (e) => {
@@ -20,12 +20,11 @@ export default function Login() {
     loginUser(user).then((res) => {
       if (res.token) {
         localStorage.setItem("token", res.token);
-
         const token = localStorage.getItem("token");
         const decoded = jwt_decode(token);
         setUser({ ...decoded.user });
+        setIsLoggedIn(true);
         alert(`welcome ${decoded.user.FirstName} `);
-
         Navigate("/home");
       } else {
         alert("Check your password or email");

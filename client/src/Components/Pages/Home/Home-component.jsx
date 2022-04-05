@@ -1,7 +1,12 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
-    <div>Home</div>
+    <>
+    <Link to=""><div>prodact</div></Link>
+    <Link to=""><div>prodact</div></Link>
+    <Link to=""><div>prodact</div></Link>
+    <Link to=""><div>prodact</div></Link>
+    </>
   )
 }
