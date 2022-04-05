@@ -19,14 +19,8 @@ export const AppRouter = () => {
             <Route exact path="/profile" element={<Profile />}></Route>
           </Routes>
         </div>
-
-
-      <Footer />
       </BrowserRouter>
-<<<<<<< HEAD
       <Footer />
-=======
->>>>>>> 2fc32e1a061c3905b18b226d2fa1a9740bb9e777
 
     </div>
   );
