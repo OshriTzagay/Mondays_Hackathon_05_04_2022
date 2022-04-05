@@ -5,7 +5,7 @@ export default function Navbar() {
     <div>
       <Link to="/">LOGIN||</Link>
       <Link to="home">HOME||</Link>
-      <Link to="posts">POSTS||</Link>
+      <Link to="ideas">POSTS||</Link>
       <Link to="profile">PROFILE||</Link>
     </div>
   );

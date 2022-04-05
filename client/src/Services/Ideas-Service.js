@@ -31,21 +31,21 @@ export const GetIdeaById = async (id) => {
 }
 
 
-// export const GetIdeaByType = async (type) => {
-//     let options ={
-//         headers: {
-//             "content-type": "application/json",
-//                 "Authorization": `Bearer ${localStorage.getItem("token")} `
-//         }
-//     }
-//     try {
-//         return await fetch(`${BASIC_URL}/type/${type}`,options)
-//             .then(response => response.json())
-//             .catch(reject => console.error(reject))
-//     } catch (error) {
-//         return error
-//     }
-// }
+export const GetIdeaByType = async (type) => {
+    let options ={
+        headers: {
+            "content-type": "application/json",
+                "Authorization": `Bearer ${localStorage.getItem("token")} `
+        }
+    }
+    try {
+        return await fetch(`${BASIC_URL}/type/${type}`,options)
+            .then(response => response.json())
+            .catch(reject => console.error(reject))
+    } catch (error) {
+        return error
+    }
+}
 
 export const CreateIdea = async (idea,id) => {
     try {
