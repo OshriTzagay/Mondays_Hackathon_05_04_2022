@@ -17,8 +17,11 @@ const Idea = new mongoose.Schema(
     Views: { type: Array },
 
     UserId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+
   },
   { timestamps: true }
 );
+
+
 
 module.exports = mongoose.model("Idea", Idea);
