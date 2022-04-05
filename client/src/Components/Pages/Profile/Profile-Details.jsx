@@ -23,7 +23,9 @@ export default function ProfileDetails({ currentUser }) {
             <div className="cardPost">
               <h2 className="inputPost">{post.IdeaTitle}</h2>
               <h5 className="inputPost">Category : {post.Category}</h5>
-              {/* <h5 className="inputPost">Description : {post.Description}</h5> */}
+
+              {/* <h5 className="inputPost">Description : {post.Description.text? post.Description.text :post.Description}</h5> */}
+
               <h5 className="inputPost">Likes : {post.Likes}</h5>
               <h5 className="inputPost">Status : {post.Status}</h5>
             </div>
