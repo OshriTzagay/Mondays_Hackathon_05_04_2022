@@ -44,7 +44,7 @@ module.exports = {
   },
 
   GetUser: async (req, res) => {
-    await Users.findById({ _id: req.params.id })
+    await Users.findById({ _id: req.params.id }).populate('Company Ideas')
       .then((data) => res.send({ Chosen_User: data }))
       .catch((err) => res.send({ ERROR: err }));
   },
