@@ -20,8 +20,7 @@ export const AppRouter = () => {
         <NavBar />
         <div className="main-content">
           <Routes>
-            <Route exact path="/" element={<Login />}></Route>
-
+            <Route exact path="/" element={isLoggedIn?<Home />:<Login/>}></Route>
             <Route exact path="/home" element={<Home />}> </Route>
             <Route exact path="/ideas" element={<Ideas />}>
             <Route exact path=":prodact" element={<IdeasByCategory />}></Route>
