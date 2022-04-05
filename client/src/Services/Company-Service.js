@@ -1,4 +1,4 @@
-const BASIC_URL ="http://localhost:8100/report";
+const BASIC_URL ="http://localhost:8000/company";
 export const GetAllCompany = async () => {
     let options ={
         headers: {
