@@ -1,0 +1,22 @@
+.login-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+.login-form{
+width: 20vw;
+height: 50vh;
+border: black 1px solid ;
+}
+
+.login-img{
+width: 80vw;
+height: 100vh;
+}
+
+.login-img img{
+    width: 100%;
+    height: 100vh;
+    }
