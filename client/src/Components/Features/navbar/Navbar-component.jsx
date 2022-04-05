@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UsersContext } from "../../../Context/User/User-context";
 import "./NavBar.css";
 import { MdLogout } from 'react-icons/md';
@@ -24,7 +24,7 @@ export default function Navbar() {
         <Link className="nav-links" to="home">ICON</Link>
         <Link className="nav-links" to="home">HOME</Link>
         {user.isAdmin ?
-          <Link className="nav-links" to="admin">Admin||</Link>
+          <Link className="nav-links" to="admin">Admin</Link>
           : ''}
         {/* <Link className="nav-links" to="/">LOGIN</Link> */}
         <Link className="nav-links" to="ideas">Ideas</Link>
