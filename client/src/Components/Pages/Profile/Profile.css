@@ -1,0 +1,32 @@
+.DetailsUser img{
+    margin: 1%;
+    width: 12vw;
+    height: 20vh;
+    border-radius: 50%;
+}
+.DetailsUser{
+width: 60vw;
+height: 60vh;
+box-shadow: 4px 4px 4px 3px rgba(80, 41, 75, 0.603);
+margin-left: 18vw;
+/* border-radius: 2%; */
+padding: 1%;
+background-color: white;
+}
+.cardPost{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.userPosts{
+    box-shadow: 4px 4px 4px 3px rgba(80, 41, 75, 0.603);
+    width: 50vw;
+    height: auto;
+    margin-left: 25%;
+    padding: 1%;
+    margin-top: 1%;
+    background-color:whitesmoke;
+}
+.inputPost{
+    width: 100%;
+}
