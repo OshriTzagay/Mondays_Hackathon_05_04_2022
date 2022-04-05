@@ -1,12 +1,32 @@
 .the-navbar{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    justify-content: space-around;
+    /* justify-content: center;
+    justify-content: space-around; */
     height: 15vh;
+    width: 98vw;
 }
 .nav-links{
     font-size: 30px;
     text-decoration: none;
 
+}
+
+.left-nav{
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
+}
+
+.right-nav{
+    display: flex;
+    width: 25vw;
+    justify-content:space-around;
+    justify-content: flex-end;
+
+    /* justify-content: ; */
+}
+.right-nav a{
+    margin: 10px;
+    font-size: 32px;
 }
