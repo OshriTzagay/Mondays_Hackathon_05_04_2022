@@ -1,10 +1,10 @@
 const companyCRUD = require('../Controllers/company-ctrl');
-const commentRouter = require('express').Router();
+const companyRouter = require('express').Router();
 
-ideaRouter.get('/',IdeasCRUD.GetAllIdeas);
-ideaRouter.get('/:id',IdeasCRUD.GetIdeaById);
-ideaRouter.post('/:UserId',IdeasCRUD.AddIdea);
-ideaRouter.put('/:id',IdeasCRUD.UpdateIdea);
-ideaRouter.delete('/:id',IdeasCRUD.DeleteIdea);
+companyRouter.get('/',companyCRUD.GetAllCompanies);
+companyRouter.get('/:id',companyCRUD.GetCompanyById);
+companyRouter.post('/',companyCRUD.AddCompany);
+companyRouter.put('/:id',companyCRUD.UpdateCompany);
+companyRouter.delete('/:id',companyCRUD.DeleteCompany);
 
-module.exports = ideaRouter;
+module.exports = companyRouter;
