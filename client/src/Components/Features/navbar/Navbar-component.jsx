@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 
 import "./NavBar.css"
+
 import React, { useContext, useEffect, useState } from "react";
 import { UsersContext } from "../../../Context/User/User-context";
+import "./NavBar.css";
+
+
 export default function Navbar() {
   const { user, setUser } = useContext(UsersContext);
   return (
