@@ -22,7 +22,7 @@ module.exports = {
     if (Users.exists(req.body.Email) == false)
       return res.status(400).json({ message: "Email not found" });
     try {
-      const user = await Users.findOne({ Email: req.body.Email });
+      const user = await Users.findOne({ Email: req.body.Email }).populate('Company');
       bcrypt.compare(req.body.Password, user.Password, (err, isMatch) => {
         if (err) return res.status(500).json({ message: "Error" });
         if (!isMatch)
