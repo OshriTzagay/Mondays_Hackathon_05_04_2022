@@ -17,6 +17,7 @@ background-color: white;
     display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
 }
 .userPosts{
     box-shadow: 4px 4px 4px 3px rgba(80, 41, 75, 0.603);

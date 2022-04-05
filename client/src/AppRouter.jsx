@@ -17,8 +17,8 @@ export const AppRouter = () => {
   return (
     <div className="App">
       <BrowserRouter>
-      {isLoggedIn? <NavBar />  : null}
-       
+      {/* {isLoggedIn? <NavBar />  : null} */}
+       <NavBar/>
         <div className="main-content">
           <Routes>
             <Route exact path="/" element={<Login />}></Route>
@@ -27,10 +27,10 @@ export const AppRouter = () => {
             <Route exact path=":prodact" element={<IdeasByCategory />}></Route>
             </Route>
             <Route exact path="/profile/:id" element={<Profile />}></Route>
-              <Route exact path="*" element={<NotFound />}></Route>
+            <Route exact path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
-      {isLoggedIn?<Footer />: null}
+      {/* {isLoggedIn?<Footer />: null} */}
     
       </BrowserRouter>
   
