@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetUserById } from "../../../Services/User-Service";
-import ProfileDetails from "./Profile-Details"
+import ProfileDetails from "./Profile-Details";
+import './Profile.css'
 
 export default function Profile() {
   const {id}=useParams()
