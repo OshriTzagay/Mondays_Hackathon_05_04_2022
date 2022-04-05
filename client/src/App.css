@@ -1,11 +1,15 @@
 .App {
   text-align: center;
-  width: 100vw;
-  height: 100%;
+  width: 100%;
+  height: 100vw;
 }
-body{
+/* body{
   width: 100vw;
   height: 100%;
+} */
+.main-content{
+  width: 100%;
+  height: 100%
 }
 
 
