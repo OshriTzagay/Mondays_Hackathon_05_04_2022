@@ -5,7 +5,7 @@ userRouter.get('/',UsersCrud.GetAll);
 userRouter.get('/:id',UsersCrud.GetUser);
 userRouter.post('/login',UsersCrud.Login);
 userRouter.post('/register',UsersCrud.Register);
-userRouter.delete('/:name',UsersCrud.DeleteUserByName);
+userRouter.delete('/:name',UsersCrud.DeleteUserById);
 
 module.exports = userRouter;
 
