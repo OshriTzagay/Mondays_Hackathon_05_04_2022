@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./NavBar.css"
 
@@ -12,7 +12,15 @@ import { CgProfile } from 'react-icons/cg';
 
 
 export default function Navbar() {
-  const { user, setUser } = useContext(UsersContext);
+const navigate = useNavigate();
+const { user, setUser,setIsLoggedIn } = useContext(UsersContext);
+const LogOut = ()=>{
+  localStorage.removeItem("token")
+  setUser({})
+  setIsLoggedIn(false)
+  navigate("/")
+}
+
   return (
     <div className="the-navbar">
       <div className="left-nav">
@@ -26,7 +34,7 @@ export default function Navbar() {
       <div className="right-nav">
 
       <Link className="nav-links" to={`profile/${user._id}`}><CgProfile/></Link>
-      <Link className="nav-links" to="/"><MdLogout/></Link>
+      <Link className="nav-links" to="/" onClick={LogOut}><MdLogout/></Link>
 
       </div>
 
@@ -36,5 +44,3 @@ export default function Navbar() {
 
   );
 }
-// localStorage.clear();
-// setUser({});
