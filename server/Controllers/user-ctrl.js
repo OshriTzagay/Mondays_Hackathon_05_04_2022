@@ -40,13 +40,13 @@ module.exports = {
   GetAll: async (req, res) => {
     await Users.find()
       .then((result) => res.send(result))
-      .catch((err) => res.status(400).send({ Error: err }));
+      .catch((err) => res.status(400).send(err));
   },
 
   GetUser: async (req, res) => {
     await Users.findById({ _id: req.params.id }).populate('Company Ideas')
       .then((data) => res.send({ Chosen_User: data }))
-      .catch((err) => res.send({ ERROR: err }));
+      .catch((err) => res.send(err));
   },
 
   DeleteUserById: async (req, res) => {

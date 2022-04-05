@@ -9,6 +9,7 @@ import Footer from "./Components/Features/Footer/Footer-component";
 import NotFound from "./Components/Pages/NotFound/NotFound-component";
 import { UsersContext } from "./Context/User/User-context";
 import { useContext } from "react";
+import Admin from "./Components/Pages/Admin/Admin-component";
 
 export const AppRouter = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(UsersContext);
@@ -20,11 +21,16 @@ export const AppRouter = () => {
         <NavBar />
         <div className="main-content">
           <Routes>
+
             <Route exact path="/" element={isLoggedIn?<Home />:<Login/>}></Route>
+
             <Route exact path="/home" element={<Home />}> </Route>
             <Route exact path="/ideas" element={<Ideas />}>
             <Route exact path=":prodact" element={<IdeasByCategory />}></Route>
             </Route>
+            <Route exact path="/admin" element={<Admin />}></Route>
+            {/* <Route exact path=":admin" element={<IdeasByCategory />}></Route>
+            </Route> */}
             <Route exact path="/profile/:id" element={<Profile />}></Route>
               <Route exact path="*" element={<NotFound />}></Route>
 
