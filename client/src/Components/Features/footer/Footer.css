@@ -44,7 +44,7 @@
 }
 .footer:hover {
   transition-duration: 0.5s;
-  height: 20em;
+  height: 7em;
 }
 .footer #container {
   margin-top: 5px;

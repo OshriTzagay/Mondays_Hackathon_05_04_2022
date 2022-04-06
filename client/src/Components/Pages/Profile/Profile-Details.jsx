@@ -29,7 +29,7 @@ export default function ProfileDetails({ currentUser }) {
             <h2>{post.Description.text}</h2>
           </div>
         </div>
-      ))}<TopFive/>
+      ))}<div className="TopInProfile"><TopFive /></div>
     </>
   );
 }
