@@ -1,3 +1,4 @@
+
 .ideasAndTop{
     display: flex;
     /* flex-wrap: wrap; */
@@ -23,12 +24,22 @@ margin-left: 1%;
    /* grid-area: TopFive; */
 
 }
-.cardIdea{
+
+
+.ideasHolder{
+width:100%;
+display: flex;
+flex-wrap: wrap;
+margin:auto;
+justify-content: space-around;
+}
+.Card{
+
     display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   box-shadow: 4px 4px 4px 3px rgba(80, 41, 75, 0.603);
-    width: 50vw;
+    width: 60%;
     margin-left: 25%;
     padding: 1%;
     margin-top: 1%;

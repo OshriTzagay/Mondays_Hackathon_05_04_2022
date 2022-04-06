@@ -14,9 +14,13 @@ useEffect(()=>{
     loadIdeas();
     console.log(type);
 },[])
+
   return (<div className='ideasAndTop'>
     <div className='Top'><TopFive/></div>
-    <div className='Ideas'>{ideas.map((idea,i)=>{
+
+
+    <div className="ideasHolder">{ideas.map((idea,i)=>{
+
 return <h1 key={i}><Idea idea={idea}/></h1>
     })}</div>
     </div>

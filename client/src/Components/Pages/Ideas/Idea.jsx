@@ -16,7 +16,7 @@ export default function Idea ({idea}){
 const [likes,setLikes]=useState(true)
 return (
 
-  <Card className="Card" sx={{ maxWidth: "40%" ,marginTop:"15px" ,marginLeft:"auto" ,marginRight:"auto" }} >
+  <Card className="Card" sx={{  marginTop:"15px" ,marginLeft:"auto" ,marginRight:"auto" }} >
       <CardHeader
       sx={{cursor:"pointer"}}
         avatar={

@@ -16,6 +16,8 @@ export default function IdeaFullView(){
     return(
         <>
 <div className="cardIdea">
+    <div className="idea-user">
+    </div>
         <h5 className="inputCreate">{idea.createdAt}</h5>
             <h2 className="inputIdea">{idea.IdeaTitle}</h2>
             <h5 className="inputIdea">Category : {idea.Category}</h5>
