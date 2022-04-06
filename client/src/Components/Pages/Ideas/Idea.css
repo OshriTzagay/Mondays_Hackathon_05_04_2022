@@ -44,3 +44,40 @@ margin-left: 1%;
    justify-content: space-around;
     display: flex;
 }
+.post-comment-box { 
+      border: 13px solid black;
+    width: 40%;
+    height: 100px;
+    margin: auto;
+    background-color: white;
+  }
+  .idea-comment-box p {
+
+    margin-top: 20px;
+    word-wrap: break-word;
+    width: 80%;
+  }
+  .commentWriter {
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(5, 5, 46);
+  }
+  .commentWriter:hover {
+    font-weight: bold;
+  }
+  .idea-commentInput {
+    width: 40%;
+    height: 200px;
+    margin-bottom: 0;
+  }
+  .comment-btn {
+    margin-top: 0;
+    height: 70px;
+    width: 80%;
+    margin: auto;
+  }
+  .comment-btn button {
+    margin-top: 0;
+    
+  }
