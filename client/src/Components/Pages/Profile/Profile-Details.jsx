@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { UsersContext } from "../../../Context/User/User-context";
 import { GetIdeaById } from "../../../Services/Ideas-Service";
 import { GetUserById } from "../../../Services/User-Service";
+import TopFive from "../../Features/TopFive/TopFive";
 // import { GetAll } from '../../../Services/User-Service';
 
 export default function ProfileDetails({ currentUser }) {
@@ -23,15 +24,12 @@ export default function ProfileDetails({ currentUser }) {
           <div className="cardPost">
         <h5 className="inputCreate">{post.createdAt}</h5>
             <h2 className="inputPost">{post.IdeaTitle}</h2>
-            <h5 className="inputPost">Category : {post.Category}</h5>
-            {/* <h5 className="inputPost">Description : {post.Description.text? post.Description.text :post.Description}</h5> */}
-
-            <h5 className="inputPost">Likes : {post.Likes}</h5>
-            <h5 className="inputPost">Status : {post.Status}</h5>
-            <h1>{post.Description.text}</h1>
+            <p className="inputPost">{post.Category} {post.Likes} {post.Status}</p>
+            {/* <p className="inputPost">Description : {post.Description.text? post.Description.text :post.Description}</p> */}
+            <h2>{post.Description.text}</h2>
           </div>
         </div>
-      ))}
+      ))}<div className="TopInProfile"><TopFive /></div>
     </>
   );
 }

@@ -19,7 +19,7 @@ export default function Profile() {
   return (
     <>
   {currentUser.Ideas &&  <ProfileDetails currentUser={currentUser}/>}
-  <TopFive/>
+  {/* <TopFive/> */}
     </>
   );
 }

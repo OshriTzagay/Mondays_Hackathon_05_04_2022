@@ -38,3 +38,7 @@ background-color: white;
 .inputPost{
     width: 100%;
 }
+.TopInProfile{
+    position: absolute;
+    top:500px;
+}
