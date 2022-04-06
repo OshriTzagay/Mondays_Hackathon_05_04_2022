@@ -14,15 +14,6 @@ function AdminTab() {
         case "AdminDetails":
             return <AdminDetails/>;
     }
-    // if (AdminTab == "AdminTable"){
-    //     return <AdminTable/>
-    // }
-    // if (AdminTab == "AdminDecorate"){
-    //     return <AdminDecorate/>
-    // }
-    // if (AdminTab == "AdminDetails"){
-    //     return <AdminDetails/>
-    // }
 }
 
 export default AdminTab;
