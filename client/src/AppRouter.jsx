@@ -29,12 +29,11 @@ export const AppRouter = () => {
             {/* <Route exact path=":admin" element={<IdeasByCategory />}></Route>
             </Route> */}
             <Route exact path="/profile/:id" element={<Profile />}></Route>
-              <Route exact path="*" element={<NotFound />}></Route>
-
-
+            <Route exact path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
-    <Footer />
+      {/* {isLoggedIn?<Footer />: null} */}
+    <Footer/>
       </BrowserRouter>
   
 
