@@ -14,7 +14,9 @@ const TopFive = () => {
   const five = [];
   return (
     <>
-    <h1>The Top </h1>
+    <img className="" src="https://e7.pngegg.com/pngimages/93/768/png-clipart-five-gold-stars-illustration-united-states-5-star-award-5-star-text-computer-wallpaper-thumbnail.png"
+    alt="star" />
+    {/* <h1>The Top </h1> */}
     <div className="TopFive">
           {user.map((users) => (
         <div className="top5cards">

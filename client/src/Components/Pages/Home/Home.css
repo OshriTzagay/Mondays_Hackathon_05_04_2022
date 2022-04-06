@@ -1,0 +1,22 @@
+.cardsHome{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+.oneCard {
+    width: 40vw;
+    height: 50vh;
+    margin: 1%;
+}
+.oneCard img{
+    width: 40vw;
+    height: 50vh;
+    opacity: 0.4;
+    border-radius: 10%;
+}
+.oneCard h1{
+    position: absolute;
+    margin-top:-200px;
+    margin-left: 260px;
+    font-size: 30px;
+}
