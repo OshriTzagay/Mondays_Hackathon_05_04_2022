@@ -23,11 +23,13 @@ export default function Navbar() {
       <div className="left-nav">
         <Link className="nav-links" to="home">ICON</Link>
         <Link className="nav-links" to="home">HOME</Link> 
+        <Link className="nav-links" to="ideas">Ideas</Link>
+
         {user.isAdmin ?
           <Link className="nav-links" to="admin">Admin</Link>
           : ''}
         {/* <Link className="nav-links" to="/">LOGIN</Link> */}
-        <Link className="nav-links" to="ideas">Ideas</Link>
+          <Link className="nav-links" to="home">About Us</Link> 
       </div>
       <div className="right-nav">
 
