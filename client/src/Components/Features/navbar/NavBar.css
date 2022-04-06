@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat+Alternates&family=Righteous&display=swap');
 .the-navbar{
     display: flex;
     flex-direction: row;
@@ -13,6 +14,7 @@
 }
 
 .left-nav{
+    font-family: 'Righteous', cursive;
     display: flex;
     width: 70vw;
     justify-content: space-between;
@@ -20,13 +22,14 @@
 
 .right-nav{
     display: flex;
-    width: 25vw;
+    width: 30vw;
     justify-content:space-around;
     justify-content: flex-end;
 
     /* justify-content: ; */
 }
 .right-nav a{
+    
     margin: 10px;
     font-size: 32px;
 }
