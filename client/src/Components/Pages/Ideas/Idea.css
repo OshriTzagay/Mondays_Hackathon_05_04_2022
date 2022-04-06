@@ -1,9 +1,16 @@
-.cardIdea{
+.ideasHolder{
+width:100%;
+display: flex;
+flex-wrap: wrap;
+margin:auto;
+justify-content: space-around;
+}
+.Card{
     display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   box-shadow: 4px 4px 4px 3px rgba(80, 41, 75, 0.603);
-    width: 50vw;
+    width: 60%;
     margin-left: 25%;
     padding: 1%;
     margin-top: 1%;
@@ -19,3 +26,40 @@
    justify-content: space-around;
     display: flex;
 }
+.post-comment-box { 
+      border: 13px solid black;
+    width: 40%;
+    height: 100px;
+    margin: auto;
+    background-color: white;
+  }
+  .idea-comment-box p {
+
+    margin-top: 20px;
+    word-wrap: break-word;
+    width: 80%;
+  }
+  .commentWriter {
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(5, 5, 46);
+  }
+  .commentWriter:hover {
+    font-weight: bold;
+  }
+  .idea-commentInput {
+    width: 40%;
+    height: 200px;
+    margin-bottom: 0;
+  }
+  .comment-btn {
+    margin-top: 0;
+    height: 70px;
+    width: 80%;
+    margin: auto;
+  }
+  .comment-btn button {
+    margin-top: 0;
+    
+  }

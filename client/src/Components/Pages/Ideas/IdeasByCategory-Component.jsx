@@ -14,7 +14,7 @@ useEffect(()=>{
     console.log(type);
 },[])
   return (
-    <div>{ideas.map((idea,i)=>{
+    <div className="ideasHolder">{ideas.map((idea,i)=>{
 return <h1 key={i}><Idea idea={idea}/></h1>
     })}</div>
   )

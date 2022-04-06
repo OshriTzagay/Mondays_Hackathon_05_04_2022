@@ -12,7 +12,10 @@ import { useContext } from "react";
 import Admin from "./Components/Pages/Admin/Admin-component";
 import AdminTab from "./Components/Features/AdminTab/AdminTab-component";
 import AddIdea from "./Components/Features/Add-Idea/Add-Idea-component";
+
 import StickyLight from "./Components/Features/StickyLight/StickLight-component";
+
+import IdeaFullView from "./Components/Pages/Ideas/IdeaFullView"
 
 export const AppRouter = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(UsersContext);
@@ -25,7 +28,7 @@ export const AppRouter = () => {
             <Route exact path="/" element={isLoggedIn?<Home />:<Login/>}></Route>
             <Route exact path="/home" element={<Home />}> </Route>
 
-            <Route exact path="/idea/:id" element={<Home />}> </Route>
+            <Route exact path="/idea/:id" element={<IdeaFullView />}> </Route>
 
             <Route exact path="/addidea" element={<AddIdea />}> </Route>
 

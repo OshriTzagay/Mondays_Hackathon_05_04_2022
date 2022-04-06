@@ -14,14 +14,14 @@ export const GetAllComment = async (page) => {
     }
 
 }
-export const GetPostComment = async (postId) => {
+export const GetIdeaComment = async (postId) => {
     let options ={
         headers: {
             "content-type": "application/json",
                 "Authorization": `Bearer ${localStorage.getItem("token")} `
         }}
     try {
-        return await fetch(`${BASIC_URL}/post/${postId}`,options)
+        return await fetch(`${BASIC_URL}/idea/${postId}`,options)
             .then(response => response.json())
             .catch(reject => console.error(reject))
     } catch (error) {
