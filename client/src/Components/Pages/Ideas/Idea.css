@@ -1,60 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-.ideasAndTop{
+.ideas-container{
     display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-around;  */
-    width: 100vw;
-    /* display:grid; */
-    gap: 3px;
-    /* grid-area: TopFive; */
-    /* grid-template-areas:
-    'TopFive Ideas Ideas Ideas '
-    'TopFive Ideas Ideas Ideas '
-    'TopFive Ideas Ideas Ideas '
-    'TopFive footer footer footer ' */
+    width: 98vw;
+
 }
 .Ideas{
-    /* grid-area: Ideas; */
  width: 70vw;
-margin-left: 1%; 
+/* margin-left: 1%;  */
 
 }
 .Top{
-   width: 20vw; 
-   /* grid-area: TopFive; */
+   width: 30vw; 
 
 }
 
+.ideasCards{
+  width: 100%;
+  height: 20%;
+}
 
 .ideasHolder{
-width:100%;
+width:70vw;
 display: flex;
+flex-direction: row;
 flex-wrap: wrap;
-margin:auto;
-justify-content: space-around;
+/* margin:auto; */
+/* justify-content: space-around; */
 }
+.TopFive{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.top5cards{
+  width: 80%;
+  border: 2px solid gray;
+  text-align: center;
+  /* display: flex; */
+  
+  justify-content: space-evenly;
+
+  
+}
+
+.top5cards h5{
+  font-size: large;
+  font-family: 'Lobster', cursive;
+}
+
+.imgProfile{
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
 .Card{
 
     display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   box-shadow: 4px 4px 4px 3px rgba(80, 41, 75, 0.603);
-    width: 60%;
-    margin-left: 25%;
+    width: 40%;
+    /* margin-left: 25%;
     padding: 1%;
-    margin-top: 1%;
+    margin-top: 1%; */
     background-color:whitesmoke;
+  }
+
+.categories-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
+
+
+
+
+
 
 .inputIdea{
     width: 90%;
 }
-.inner-nav{
+/* .inner-nav{
     width: 100%;
    text-align: center;
    justify-content: space-around;
     display: flex;
-}
+} */
 .post-comment-box { 
       border: 13px solid black;
     width: 40%;

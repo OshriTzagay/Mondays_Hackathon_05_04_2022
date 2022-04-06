@@ -1,0 +1,13 @@
+.inner-nav{
+    width: 100%;
+   text-align: center;
+   justify-content: space-around;
+    display: flex;
+}
+
+
+.ideas-container{
+    display: flex;
+    width: 98vw;
+
+}
