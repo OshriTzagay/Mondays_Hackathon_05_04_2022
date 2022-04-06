@@ -21,6 +21,7 @@ export default function ProfileDetails({ currentUser }) {
       {currentUser.Ideas.map((post, i) => (
         <div className="userPosts" key={i}>
           <div className="cardPost">
+        <h5 className="inputCreate">{post.createdAt}</h5>
             <h2 className="inputPost">{post.IdeaTitle}</h2>
             <h5 className="inputPost">Category : {post.Category}</h5>
             {/* <h5 className="inputPost">Description : {post.Description.text? post.Description.text :post.Description}</h5> */}
