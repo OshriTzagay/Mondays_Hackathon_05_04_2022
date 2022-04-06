@@ -22,10 +22,10 @@ export const AppRouter = () => {
   return (
     <div className="App">
       <BrowserRouter>
-      {isLoggedIn &&  <NavBar />}
+        {isLoggedIn && <NavBar />}
         <div className="main-content">
           <Routes>
-            <Route exact path="/" element={isLoggedIn?<Home />:<Login/>}></Route>
+            <Route exact path="/" element={isLoggedIn ? <Home /> : <Login />}></Route>
             <Route exact path="/home" element={<Home />}> </Route>
 
             <Route exact path="/idea/:id" element={<IdeaFullView />}> </Route>
@@ -34,19 +34,20 @@ export const AppRouter = () => {
 
             <Route exact path="/ideas" element={<Ideas />}> </Route>
             <Route exact path="/ideas/:type" element={<IdeasByCategory />}></Route>
-           
-            <Route exact path="/admin" element={<Admin />}>
-            <Route exact path=":AdminTab" element={<AdminTab/>}/>
-            </Route>
+            {/* <section className="adminRoutContainer"> */}
+              <Route className="adminRoutContainer" exact path="/admin" element={<Admin />}>
+                <Route exact path=":AdminTab" element={<AdminTab />} />
+              </Route>
+            {/* </section> */}
             <Route exact path="/profile/:id" element={<Profile />}></Route>
             <Route exact path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
-      {/* {isLoggedIn?<Footer />: null} */}
-    {/* <Footer/> */}
-    {isLoggedIn &&  <Footer />}
+        {/* {isLoggedIn?<Footer />: null} */}
+        {/* <Footer/> */}
+        {isLoggedIn && <Footer />}
       </BrowserRouter>
-  
+
 
     </div>
   );
