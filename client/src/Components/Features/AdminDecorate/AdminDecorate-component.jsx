@@ -6,4 +6,4 @@ function AdminDecorate() {
   )
 }
 
-export default AdminDecorate-component
+export default AdminDecorate;

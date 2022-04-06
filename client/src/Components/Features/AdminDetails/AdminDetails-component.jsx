@@ -6,4 +6,4 @@ function AdminDetails() {
   )
 }
 
-export default AdminDetails-component
+export default AdminDetails;
