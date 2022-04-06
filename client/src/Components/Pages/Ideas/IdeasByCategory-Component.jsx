@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import {GetIdeaByType} from "../../../Services/Ideas-Service" ;
 import { useParams } from "react-router-dom";
 import Idea from "./Idea"
+import TopFive from '../../Features/TopFive/TopFive';
 export default function IdeasByCategory() {
   const {type}=useParams()
 const [ideas,setIdeas]=useState([])
@@ -13,9 +14,11 @@ useEffect(()=>{
     loadIdeas();
     console.log(type);
 },[])
-  return (
-    <div>{ideas.map((idea,i)=>{
+  return (<div className='ideasAndTop'>
+    <div className='Top'><TopFive/></div>
+    <div className='Ideas'>{ideas.map((idea,i)=>{
 return <h1 key={i}><Idea idea={idea}/></h1>
     })}</div>
+    </div>
   )
 }

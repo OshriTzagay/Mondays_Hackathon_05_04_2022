@@ -1,3 +1,28 @@
+.ideasAndTop{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around;  */
+    /* width: 100vw; */
+    display:grid;
+    gap: 3px;
+    /* grid-area: TopFive; */
+    /* grid-template-areas:
+    'TopFive Ideas Ideas Ideas '
+    'TopFive Ideas Ideas Ideas '
+    'TopFive Ideas Ideas Ideas '
+    'TopFive footer footer footer ' */
+}
+.Ideas{
+    grid-area: Ideas;
+ width: 60vw;
+margin-left: 1%; 
+
+}
+.Top{
+   width: 30vw; 
+   grid-area: TopFive;
+
+}
 .cardIdea{
     display: flex;
   flex-wrap: wrap;
