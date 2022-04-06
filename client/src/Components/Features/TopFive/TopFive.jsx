@@ -16,7 +16,7 @@ const TopFive = () => {
     <div className="TopFive">
     <h1>The Top </h1>
           {user.map((users) => (
-        <div>
+        <div className="top5cards">
           <img className="imgProfile" src={users.ProfilePic} alt="users Pic" />
           <h5>
             {users.FirstName} {users.LastName}

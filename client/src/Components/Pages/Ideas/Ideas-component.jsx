@@ -1,21 +1,24 @@
 
 import React from 'react';
-import "./Idea.css"
+// import "./Idea.css"
 import { Link ,Outlet} from "react-router-dom";
 import StickyLight from '../../Features/StickyLight/StickLight-component';
-
+import './ideasComponent.css'
 export default function Ideas() {
   return (
-    <div>
+    <div className='ideas-container'>
+      <div className='heroImg'></div>
       <div className="inner-nav">
       <StickyLight/>
 
-    <Link to="prodact"><div>prodact</div></Link>
-    <Link to="oshry"><div>osry</div></Link>
-    <Link to="prodact"><div>prodact</div></Link>
-    <Link to="prodact"><div>prodact</div></Link>
+
+  <div><Link to="prodact"><h1>Products</h1></Link></div>  
+   <div> <Link to="BusinessExcellence"><h1>Business Excellence</h1></Link></div>
+   <div><Link to="WorkFlow"><h1>Work Flow</h1></Link></div> 
+   <div> <Link to="SocialImpact"><h1>Social-Impact</h1></Link></div>
+      
     </div>
- {   <Outlet/>?<Outlet/>:<div>hello</div>}
+
     </div>
   )
 }
