@@ -34,11 +34,9 @@ export const AppRouter = () => {
 
             <Route exact path="/ideas" element={<Ideas />}> </Route>
             <Route exact path="/ideas/:type" element={<IdeasByCategory />}></Route>
-            {/* <section className="adminRoutContainer"> */}
-              <Route className="adminRoutContainer" exact path="/admin" element={<Admin />}>
-                <Route exact path=":AdminTab" element={<AdminTab />} />
-              </Route>
-            {/* </section> */}
+            <Route className="adminRoutContainer" exact path="/admin" element={<Admin />}>
+              <Route exact path=":AdminTab" element={<AdminTab />} />
+            </Route>
             <Route exact path="/profile/:id" element={<Profile />}></Route>
             <Route exact path="*" element={<NotFound />}></Route>
           </Routes>
