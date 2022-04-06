@@ -8,7 +8,7 @@ const Idea = new mongoose.Schema(
 
     Description: { type: Object },
 
-    Status: { type: String, required: true },
+    Status: { type: String, default:"Pending" },
 
     Archive: { type: Boolean, default: false },
 

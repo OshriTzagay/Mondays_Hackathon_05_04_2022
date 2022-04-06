@@ -10,6 +10,7 @@ import NotFound from "./Components/Pages/NotFound/NotFound-component";
 import { UsersContext } from "./Context/User/User-context";
 import { useContext } from "react";
 import Admin from "./Components/Pages/Admin/Admin-component";
+import AddIdea from "./Components/Features/Add-Idea/Add-Idea-component";
 
 export const AppRouter = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(UsersContext);
@@ -22,7 +23,11 @@ export const AppRouter = () => {
           <Routes>
             <Route exact path="/" element={isLoggedIn?<Home />:<Login/>}></Route>
             <Route exact path="/home" element={<Home />}> </Route>
+
             <Route exact path="/idea/:id" element={<Home />}> </Route>
+
+            <Route exact path="/addidea" element={<AddIdea />}> </Route>
+
             <Route exact path="/ideas" element={<Ideas />}>
             <Route exact path=":type" element={<IdeasByCategory />}></Route>
             </Route>
@@ -30,12 +35,11 @@ export const AppRouter = () => {
             {/* <Route exact path=":admin" element={<IdeasByCategory />}></Route>
             </Route> */}
             <Route exact path="/profile/:id" element={<Profile />}></Route>
-              <Route exact path="*" element={<NotFound />}></Route>
-
-
+            <Route exact path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
-    <Footer />
+      {/* {isLoggedIn?<Footer />: null} */}
+    <Footer/>
       </BrowserRouter>
   
 
