@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GetAll } from "../../../Services/User-Service";
-
+import './TopFive.css';
 const TopFive = () => {
   const [user, setUser] = useState([]);
 
@@ -13,17 +13,18 @@ const TopFive = () => {
   }, []);
   const five = [];
   return (
-    <div>
+    <div className="TopFive">
+    <h1>The Top </h1>
           {user.map((users) => (
         <div>
-          <img src={users.ProfilePic} alt="users Pic" />
-          <h2>
+          <img className="imgProfile" src={users.ProfilePic} alt="users Pic" />
+          <h5>
             {users.FirstName} {users.LastName}
-          </h2>
-          <h3>{users.Age}</h3>
-          <h3>{users.Email}</h3>
-          <h3>{users.Position}</h3>
-          <h3>{users.Rank}</h3>
+          </h5>
+          <p>{users.Email}<br/>
+          {users.Position}<br/>
+          <img className="imgLike" src="https://img.favpng.com/15/19/13/thumb-signal-computer-icons-icon-design-hand-png-favpng-cgh9TJneUPAcpcfYuz1ZwJg3r.jpg" 
+    alt="likes"/>  {users.Rank}</p>
          
         </div>
       ))} 

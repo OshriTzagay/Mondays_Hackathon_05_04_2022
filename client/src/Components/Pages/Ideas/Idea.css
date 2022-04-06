@@ -1,3 +1,31 @@
+
+.ideasAndTop{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around;  */
+    width: 100vw;
+    /* display:grid; */
+    gap: 3px;
+    /* grid-area: TopFive; */
+    /* grid-template-areas:
+    'TopFive Ideas Ideas Ideas '
+    'TopFive Ideas Ideas Ideas '
+    'TopFive Ideas Ideas Ideas '
+    'TopFive footer footer footer ' */
+}
+.Ideas{
+    /* grid-area: Ideas; */
+ width: 70vw;
+margin-left: 1%; 
+
+}
+.Top{
+   width: 20vw; 
+   /* grid-area: TopFive; */
+
+}
+
+
 .ideasHolder{
 width:100%;
 display: flex;
@@ -6,6 +34,7 @@ margin:auto;
 justify-content: space-around;
 }
 .Card{
+
     display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

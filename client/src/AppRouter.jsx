@@ -32,9 +32,9 @@ export const AppRouter = () => {
 
             <Route exact path="/addidea" element={<AddIdea />}> </Route>
 
-            <Route exact path="/ideas" element={<Ideas />}>
-            <Route exact path=":type" element={<IdeasByCategory />}></Route>
-            </Route>
+            <Route exact path="/ideas" element={<Ideas />}> </Route>
+            <Route exact path="/ideas/:type" element={<IdeasByCategory />}></Route>
+           
             <Route exact path="/admin" element={<Admin />}>
             <Route exact path=":AdminTab" element={<AdminTab/>}/>
             </Route>
