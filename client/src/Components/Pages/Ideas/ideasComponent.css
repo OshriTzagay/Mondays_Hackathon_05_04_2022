@@ -11,3 +11,10 @@
     width: 98vw;
 
 }
+
+
+.categories a:visited{
+color:black;
+text-decoration: none;
+}
+
