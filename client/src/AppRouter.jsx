@@ -21,7 +21,6 @@ export const AppRouter = () => {
       <BrowserRouter>
       {isLoggedIn &&  <NavBar />}
         <div className="main-content">
-      <StickyLight/>
           <Routes>
             <Route exact path="/" element={isLoggedIn?<Home />:<Login/>}></Route>
             <Route exact path="/home" element={<Home />}> </Route>
@@ -41,7 +40,8 @@ export const AppRouter = () => {
           </Routes>
         </div>
       {/* {isLoggedIn?<Footer />: null} */}
-    <Footer/>
+    {/* <Footer/> */}
+    {isLoggedIn &&  <Footer />}
       </BrowserRouter>
   
 
