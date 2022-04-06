@@ -2,8 +2,8 @@
     display: flex;
     /* flex-wrap: wrap; */
     /* justify-content: space-around;  */
-    /* width: 100vw; */
-    display:grid;
+    width: 100vw;
+    /* display:grid; */
     gap: 3px;
     /* grid-area: TopFive; */
     /* grid-template-areas:
@@ -13,14 +13,14 @@
     'TopFive footer footer footer ' */
 }
 .Ideas{
-    grid-area: Ideas;
- width: 60vw;
+    /* grid-area: Ideas; */
+ width: 70vw;
 margin-left: 1%; 
 
 }
 .Top{
-   width: 30vw; 
-   grid-area: TopFive;
+   width: 20vw; 
+   /* grid-area: TopFive; */
 
 }
 .cardIdea{
