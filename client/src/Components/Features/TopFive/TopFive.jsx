@@ -13,8 +13,9 @@ const TopFive = () => {
   }, []);
   const five = [];
   return (
-    <div className="TopFive">
+    <>
     <h1>The Top </h1>
+    <div className="TopFive">
           {user.map((users) => (
         <div className="top5cards">
           <img className="imgProfile" src={users.ProfilePic} alt="users Pic" />
@@ -29,6 +30,7 @@ const TopFive = () => {
         </div>
       ))} 
     </div>
+    </>
   );
 };
 export default TopFive;
