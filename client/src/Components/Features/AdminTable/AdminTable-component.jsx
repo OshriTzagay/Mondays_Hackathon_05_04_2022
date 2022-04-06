@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -14,58 +13,71 @@ import { GetAll } from '../../../Services/User-Service';
 
 
 export default function AdminTable() {
-  const [users, setUsers] = useState({})
+  const [users, setUsers] = useState([])
   useEffect(() => {
-    GetAll()
-      .then((data) => setUsers(data))
-      .then((data) => console.log(users))
-      .catch((err) => console.log(err))
+    const loadUsers = async () => {
+      const allUsers = await GetAll()
+      setUsers(allUsers)
+    }
+    loadUsers()
+
+
   }, []);
 
-  // function createData(Position, FirstName, Rank, Role) {
-  //   return { Position, FirstName, Rank, Role };
+  function createData(Position, FirstName, Rank, Role) {
+    return { Position, FirstName, Rank, Role };
+  }
+
+  const rows = [
+    createData(users.Position),
+    createData(users.FirstName),
+    createData(users.Rank),
+    createData(users.Role),
+  ];
+
+  // const fillArray = ()=>{
+  //   users.forEach(user => {
+  //     rows.push(createData(user.Position, user.FirstName, user.Rank, user.Role),)
+  //     return rows;
   // }
-
-  const rows = [];
-
-  // users.forEach(user => {
-  //   rows.push(createData(user.Position, user.FirstName, user.Rank, user.Role),)
+  
 
 
 
 
 
     return (
-      "mmm"
-      // <TableContainer component={Paper}>
-      //   <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-      //     <TableHead>
-      //       <TableRow>
-      //         <TableCell>{users[0].Position} (100g serving)</TableCell>
-      //         <TableCell align="right">Calories</TableCell>
-      //         <TableCell align="right">Fat&nbsp;(g)</TableCell>
-      //         <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-      //         <TableCell align="right">Protein&nbsp;(g)</TableCell>
-      //       </TableRow>
-      //     </TableHead>
-      //     <TableBody>
-      //       {rows.map((row) => (
-      //         <TableRow
-      //           key={row.name}
-      //           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-      //         >
-      //           <TableCell component="th" scope="row">
-      //             {row.name}
-      //           </TableCell>
-      //           <TableCell align="right">{row.Position}</TableCell>
-      //           <TableCell align="right">{row.FirstName}</TableCell>
-      //           <TableCell align="right">{row.Rank}</TableCell>
-      //           <TableCell align="right">{row.Role}</TableCell>
-      //         </TableRow>
-      //       ))}
-      //     </TableBody>
-      //   </Table>
-      // </TableContainer>
+      // <>
+      //   {users.map((user) => {
+      //     return <li>{user.FirstName}</li>
+      //   })}</>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+          <TableHead>
+            <TableRow>
+              <TableCell class={"rowsTable"} align="center">Position</TableCell>
+              <TableCell class={"rowsTable"} align="center">FirstName</TableCell>
+              <TableCell class={"rowsTable"} align="center">LastName</TableCell>
+              <TableCell class={"rowsTable"} align="center">Rank</TableCell>
+             
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {users.map((user,i) => (
+              <TableRow
+                key={i}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell align="center" component="th" scope="row">{user.Position}</TableCell>
+                <TableCell align="center">{user.FirstName}</TableCell>
+                <TableCell align="center">{user.LastName}</TableCell>
+                <TableCell align="center">{user.Rank}</TableCell>
+              
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     );
   }
 

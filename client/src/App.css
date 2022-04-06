@@ -14,4 +14,10 @@
   min-height: 100%
 }
 
+.adminRoutContainer{
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  text-decoration: none;
+}
 

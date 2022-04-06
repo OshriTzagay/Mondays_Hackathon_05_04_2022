@@ -3,7 +3,7 @@ import { Link , Outlet} from "react-router-dom";
 export default function Admin() {
     const adminTabs=["AdminTable","AdminDetails","AdminDecorate"]
   return (
-    <div>
+    <div className="adminRoutContainer">
  {adminTabs.map((name)=>
  {return  <li>
    
