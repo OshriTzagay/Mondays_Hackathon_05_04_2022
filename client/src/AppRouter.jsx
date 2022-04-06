@@ -12,13 +12,16 @@ import { useContext } from "react";
 import Admin from "./Components/Pages/Admin/Admin-component";
 import AdminTab from "./Components/Features/AdminTab/AdminTab-component";
 import AddIdea from "./Components/Features/Add-Idea/Add-Idea-component";
+
+import StickyLight from "./Components/Features/StickyLight/StickLight-component";
+
 import IdeaFullView from "./Components/Pages/Ideas/IdeaFullView"
+
 export const AppRouter = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(UsersContext);
   return (
     <div className="App">
       <BrowserRouter>
-    
       {isLoggedIn &&  <NavBar />}
         <div className="main-content">
           <Routes>
@@ -40,7 +43,8 @@ export const AppRouter = () => {
           </Routes>
         </div>
       {/* {isLoggedIn?<Footer />: null} */}
-    <Footer/>
+    {/* <Footer/> */}
+    {isLoggedIn &&  <Footer />}
       </BrowserRouter>
   
 
