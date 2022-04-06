@@ -10,6 +10,7 @@ import NotFound from "./Components/Pages/NotFound/NotFound-component";
 import { UsersContext } from "./Context/User/User-context";
 import { useContext } from "react";
 import Admin from "./Components/Pages/Admin/Admin-component";
+import AdminTab from "./Components/Features/AdminTab/AdminTab-component";
 import AddIdea from "./Components/Features/Add-Idea/Add-Idea-component";
 
 export const AppRouter = () => {
@@ -31,9 +32,9 @@ export const AppRouter = () => {
             <Route exact path="/ideas" element={<Ideas />}>
             <Route exact path=":type" element={<IdeasByCategory />}></Route>
             </Route>
-            <Route exact path="/admin" element={<Admin />}></Route>
-            {/* <Route exact path=":admin" element={<IdeasByCategory />}></Route>
-            </Route> */}
+            <Route exact path="/admin" element={<Admin />}>
+            <Route exact path=":AdminTab" element={<AdminTab/>}/>
+            </Route>
             <Route exact path="/profile/:id" element={<Profile />}></Route>
             <Route exact path="*" element={<NotFound />}></Route>
           </Routes>
