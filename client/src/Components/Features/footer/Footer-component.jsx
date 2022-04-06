@@ -7,13 +7,14 @@ export default function Footer() {
     <footer>
       <div className="secFooter">
             <article className="artOneOfFooter"> 
-                <h1>here you have say to say</h1>
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT76tZ2T3413vt-e7SG3pxpaBr_hsVSPpBj8A&usqp=CAU'
+            alt='idea'/>
             </article>
             <article className="artTwoOfFooter">
                 <h3> Category :</h3>
-                <h5>category1</h5> 
-                 <h5>category2</h5>
-                 <h5>category3</h5> 
+                <Link to=":prodact"><div>prodact</div></Link>
+                <Link to=":prodact"><div>prodact</div></Link>
+                <Link to=":prodact"><div>prodact</div></Link>
             </article>
             <article className="artThreeOfFooter">
               <h3>Pages :</h3>

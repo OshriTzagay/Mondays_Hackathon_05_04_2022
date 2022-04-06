@@ -19,6 +19,10 @@ background-color: white;
   justify-content: space-around;
 
 }
+.secFooter img{
+    margin-top: 7%;
+    height: 70%;
+}
 .userPosts{
     box-shadow: 4px 4px 4px 3px rgba(80, 41, 75, 0.603);
     width: 50vw;
