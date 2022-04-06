@@ -31,7 +31,8 @@ export default function Navbar() {
       </div>
       <div className="right-nav">
 
-        <Link className="nav-links" to={`profile/${user._id}`}><CgProfile /></Link>
+        <Link className="nav-links" to={`profile/${user._id}`}>
+          <img className="PicUser" src={user.ProfilePic} alt="picUser"/></Link>
         <Link className="nav-links" to="/" onClick={LogOut}><MdLogout /></Link>
 
       </div>
