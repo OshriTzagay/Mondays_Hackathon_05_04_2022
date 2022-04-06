@@ -1,16 +1,49 @@
-import React from "react"
+import React,{useState} from "react";
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import { red } from '@mui/material/colors';
+import {Link} from "react-router-dom"
+import {BiUpvote} from "react-icons/bi";
 import "./Idea.css"
 export default function Idea ({idea}){
-
+const [likes,setLikes]=useState(true)
 return (
-    <div className="cardIdea">
-    <h2 className="inputIdea">{idea.IdeaTitle}</h2>
-    <h5 className="inputIdea">Category : {idea.Category}</h5>
 
-    {/* <h5 className="inputIdea">Description : {idea.Description.text? idea.Description.text :idea.Description}</h5> */}
-
-    <h5 className="inputIdea">Likes : {idea.Likes}</h5>
-    <h5 className="inputIdea">Status : {idea.Status}</h5>
-  </div>
+  <Card className="Card" sx={{ maxWidth: "40%" ,marginTop:"15px" ,marginLeft:"auto" ,marginRight:"auto" }} >
+      <CardHeader
+      sx={{cursor:"pointer"}}
+        avatar={
+          <Avatar sx={{ bgcolor: red[500],width:"80px",height:"80px"}} aria-label="recipe">
+           {/* <Link  className="avatar" to={`/profile/${idea.UserId._id}`} ><img src={idea.UserId.ProfilePic}/></Link>  */}
+          </Avatar>
+        }
+        title={`${idea.IdeaTitle}-${idea.Category}`}
+        subheader={idea.createdAt}
+      />
+    
+      <CardContent>
+        <Typography variant="body2" color="text.secondary" maxHeight="90px" overflow="hidden">
+      { idea.Description.text}
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        {likes && <IconButton aria-label="like" >
+        <BiUpvote/>
+        </IconButton>}
+        {!likes &&<IconButton aria-label="like" >
+          like
+        </IconButton>}
+        <IconButton aria-label="like" >
+        {idea.Likes.length}
+        </IconButton>
+      </CardActions>
+    </Card>
 )
 }

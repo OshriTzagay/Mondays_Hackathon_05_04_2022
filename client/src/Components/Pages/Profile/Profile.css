@@ -1,3 +1,6 @@
+.inputCreate{
+    margin-left: 80%;
+}
 .DetailsUser img{
     margin: 1%;
     width: 12vw;
@@ -6,7 +9,7 @@
 }
 .DetailsUser{
 width: 60vw;
-height: 60vh;
+height: 50vh;
 box-shadow: 4px 4px 4px 3px rgba(80, 41, 75, 0.603);
 margin-left: 18vw;
 /* border-radius: 2%; */
@@ -17,6 +20,11 @@ background-color: white;
     display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+}
+.secFooter img{
+    margin-top: 7%;
+    height: 70%;
 }
 .userPosts{
     box-shadow: 4px 4px 4px 3px rgba(80, 41, 75, 0.603);
