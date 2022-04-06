@@ -5,7 +5,8 @@ import { CreateIdea } from "../../../Services/Ideas-Service";
 export default function AddIdea() {
   const { user } = useContext(UsersContext);
   const [idea, setIdea] = useState({ 
-    Description:{}
+    Description:{},
+    UserId:user._id
   });
 
   const AddIdeaToIdeas = (e) => {
@@ -24,6 +25,7 @@ export default function AddIdea() {
     <div className="add-idea-container">
       <div className="title">
         <h1>Add Your Own Idea !</h1>
+
 
         <form>
           <label htmlFor="">Idea-Title:</label>
