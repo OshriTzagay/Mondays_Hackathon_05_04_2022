@@ -50,7 +50,7 @@ export const GetIdeaByType = async (type) => {
 export const CreateIdea = async (idea,id) => {
     try {
         return await fetch(`${BASIC_URL}/${id}`, {
-            method: "idea",
+            method: "POST",
             headers: {
                 "content-type": "application/json",
                 "Authorization": `Bearer ${localStorage.getItem("token")} `
