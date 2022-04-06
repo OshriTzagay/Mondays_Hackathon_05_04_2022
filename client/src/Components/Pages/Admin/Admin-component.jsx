@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link , Outlet} from "react-router-dom";
 export default function Admin() {
+    const adminTabs=["AdminTable","AdminDetails","AdminDecorate"]
   return (
     <div>
-    <Link to=":admin"><div>tabel</div></Link>
-    <Link to=":admin"><div>details</div></Link>
-    <Link to=":admin"><div>decorate</div></Link>
+ {adminTabs.map((name)=>
+ {return  <li>
+   
+         <Link to={name}>{name}</Link>
+     </li>
+ })}
     <Outlet/>
     </div>
   )
