@@ -5,12 +5,13 @@ import Idea from "./Idea"
 export default function IdeasByCategory() {
   const {type}=useParams()
 const [ideas,setIdeas]=useState([])
-useEffect(()=>{
+useEffect(()=>{ 
     const loadIdeas = async () => {
-        const Ideas = await GetIdeaByType("prodact");
-        setIdeas(Ideas);
-      };   
-      loadIdeas();
+      const Ideas = await GetIdeaByType(type);
+      setIdeas(Ideas);
+    };   
+    loadIdeas();
+    console.log(type);
 },[])
   return (
     <div>{ideas.map((idea,i)=>{

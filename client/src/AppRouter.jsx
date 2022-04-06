@@ -23,10 +23,13 @@ export const AppRouter = () => {
           <Routes>
             <Route exact path="/" element={isLoggedIn?<Home />:<Login/>}></Route>
             <Route exact path="/home" element={<Home />}> </Route>
+
+            <Route exact path="/idea/:id" element={<Home />}> </Route>
+
             <Route exact path="/addidea" element={<AddIdea />}> </Route>
 
             <Route exact path="/ideas" element={<Ideas />}>
-            <Route exact path=":prodact" element={<IdeasByCategory />}></Route>
+            <Route exact path=":type" element={<IdeasByCategory />}></Route>
             </Route>
             <Route exact path="/admin" element={<Admin />}></Route>
             {/* <Route exact path=":admin" element={<IdeasByCategory />}></Route>
