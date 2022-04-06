@@ -43,6 +43,9 @@ return (
         <IconButton aria-label="like" >
         {idea.Likes.length}
         </IconButton>
+        <IconButton aria-label="like" >
+       <Link to={`/idea/${idea._id}`}>see more</Link>
+        </IconButton>
       </CardActions>
     </Card>
 )
