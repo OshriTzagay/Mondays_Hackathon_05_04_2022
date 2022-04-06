@@ -6,38 +6,7 @@ const Footer = () => {
     <footer className="footer" >
       <div id="button"></div>
       <div id="container">
-        <article className="hidden-Footer">
-          <div className="logoa">
-       
-          </div>
-          <div>
-           
-            <a href="https://www.linkedin.com/feed/">linkedin </a>
-            <a href="https://github.com/YafitSamuel?tab=repositories">
-              github
-            </a>
-       
-
-          </div>
-          <div>
-          
-            <a href="https://www.linkedin.com/feed/">linkedin </a>
-
-            <a href="https://github.com/YafitSamuel?tab=repositories">
-              github
-            </a>
-        
-          </div>
-          <div>
-         
-            <a href="https://www.linkedin.com/feed/">linkedin </a>
-            <a href="https://github.com/YafitSamuel?tab=repositories">
-              github
-            </a>
-
-          </div>
-
-        </article>
+        <h3>@Copyright of Keren Hailu,Ermias Mungestu,Eliyahu Belay,Oshri Tzagay</h3>
 
       </div>
     </footer>

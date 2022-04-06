@@ -10,9 +10,12 @@
 .nav-links{
     font-size: 30px;
     text-decoration: none;
-
 }
-
+.PicUser{
+    width: 4vw;
+    height: 4vh;
+    border-radius: 50%;
+}
 .left-nav{
     margin-top: 7px;
     font-family: 'Righteous', cursive;
