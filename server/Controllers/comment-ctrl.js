@@ -9,7 +9,7 @@ const GetAllComments = async (req, res) => {
 
 
 const GetAllIdeaComments = async (req, res) => {
-    await Comments.find({IdeaId:req.params.IdeaId}).populate('UserId')
+    await Comments.find({IdeaId:req.params.id}).populate('UserId')
       .then((result) => res.status(200).json(result))
       .catch((err) => res.status(404).json({ massage: err }));
   };
