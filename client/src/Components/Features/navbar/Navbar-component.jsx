@@ -22,7 +22,7 @@ export default function Navbar() {
     <div className="the-navbar">
       <div className="left-nav">
         <Link className="nav-links" to="home">ICON</Link>
-        <Link className="nav-links" to="home">HOME</Link>
+        <Link className="nav-links" to="home">HOME</Link> 
         {user.isAdmin ?
           <Link className="nav-links" to="admin">Admin</Link>
           : ''}
