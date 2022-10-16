@@ -14,7 +14,8 @@ export default function Profile() {
         setCurrentUser(newUser.Chosen_User);
       }
       loadCurrentUser()
-  } , []);
+  } , []); 
+  
 
   return (
     <>

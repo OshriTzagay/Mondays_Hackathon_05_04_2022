@@ -25,7 +25,7 @@ export default function IdeaFullView(){
 
             <h5 className="inputIdea">Likes : {idea.Likes}</h5>
             <h5 className="inputIdea">Status : {idea.Status}</h5>
-            {/* <h1>{idea.Description.text}</h1> */}
+            {/* <h1>{idea.Description.texnm  t}</h1> */}
           </div>
           <Comments ideaId={id}/>
 </>
