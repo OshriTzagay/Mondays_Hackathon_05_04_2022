@@ -2,12 +2,14 @@
     margin-left: 80%;
 }
 .DetailsUser img{
+    
     margin: 1%;
     width: 12vw;
     height: 20vh;
     border-radius: 50%;
 }
 .DetailsUser{
+
 width: 60vw;
 height: 50vh;
 box-shadow: 4px 4px 4px 3px rgba(80, 41, 75, 0.603);
